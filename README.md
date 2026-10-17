@@ -1,18 +1,36 @@
-# React + Vite
+# Teste React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de estudo criado com React e Vite para praticar componentes, JSX, interpolação de valores e passagem de props. A página principal renderiza quatro instâncias do componente `Pratica`.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js e npm instalados. Use uma versão do Node.js compatível com o Vite definido em `package.json`.
 
-## React Compiler
+## Como executar
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```bash
+npm install
+npm run dev
+```
 
-Note: This will impact Vite dev & build performances.
+Abra no navegador o endereço exibido pelo Vite no terminal.
 
-## Expanding the ESLint configuration
+## Comandos disponíveis
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Comando | Descrição |
+| --- | --- |
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run build` | Gera a versão de produção em `dist/`. |
+| `npm run preview` | Exibe localmente a versão gerada pelo build. |
+| `npm run lint` | Executa a verificação do ESLint. |
+
+## Estrutura principal
+
+- `src/App.jsx`: renderiza o componente `Pratica` quatro vezes.
+- `src/Pratica.jsx`: contém o componente usado no exercício.
+- `src/main.jsx`: monta a aplicação no elemento `root`.
+- `vite.config.js`: configura o Vite e o React Compiler.
+
+## Estado atual
+
+Este repositório é um exercício em desenvolvimento. O componente `Pratica` recebe a prop `que`, mas ainda não a utiliza na interface. O botão não tem texto e seu manipulador chama `setTexto`, enquanto a função de atualização do estado foi declarada como `SetTexto`; por isso, clicar nele causa um erro. A imagem também usa um caminho relativo ao código-fonte que pode não funcionar na aplicação servida ou no build.
